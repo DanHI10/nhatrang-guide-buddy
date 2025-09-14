@@ -1,14 +1,20 @@
 import HeroSection from "@/components/ui/hero-section";
+import TourConstructor from "@/components/ui/tour-constructor";
+import FlightsSection from "@/components/ui/flights-section";
 import ExcursionsSection from "@/components/ui/excursions-section";
 import EntertainmentSection from "@/components/ui/entertainment-section";
 import InfoSection from "@/components/ui/info-section";
+import JobsSection from "@/components/ui/jobs-section";
 
 const Index = () => {
   return (
     <main className="min-h-screen">
       <HeroSection />
+      <TourConstructor />
+      <FlightsSection />
       <ExcursionsSection />
       <EntertainmentSection />
+      <JobsSection />
       <InfoSection />
       
       {/* Footer */}

@@ -1,13 +1,16 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import ExcursionCard from "@/components/ui/excursion-card";
-import { Filter, Sliders } from "lucide-react";
+import { Filter, Sliders, Wand2, Settings } from "lucide-react";
 import boatTourImage from "@/assets/boat-tour.jpg";
 import divingImage from "@/assets/diving.jpg";
 import spaImage from "@/assets/spa.jpg";
 
 const ExcursionsSection = () => {
+  const [tourMode, setTourMode] = useState<"auto" | "manual">("auto");
+  
   const excursions = [
     {
       title: "Морская прогулка по островам",
@@ -63,6 +66,50 @@ const ExcursionsSection = () => {
             Выберите из более чем 50 увлекательных экскурсий и туров по Нячангу
           </p>
         </div>
+
+        {/* Режим подбора тура */}
+        <Card className="p-6 mb-8 bg-gradient-to-r from-primary/5 to-secondary/5 border-0 shadow-card">
+          <div className="text-center mb-6">
+            <h3 className="text-xl font-bold mb-2">Как вы хотите планировать экскурсии?</h3>
+            <p className="text-muted-foreground">Выберите удобный для вас способ</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            <Button
+              variant={tourMode === "auto" ? "default" : "outline"}
+              onClick={() => setTourMode("auto")}
+              className={`h-auto p-6 ${tourMode === "auto" 
+                ? "bg-gradient-ocean text-white" 
+                : "hover:border-primary/50"
+              }`}
+            >
+              <div className="text-center">
+                <Wand2 className="h-8 w-8 mx-auto mb-3" />
+                <h4 className="font-semibold mb-2">Автоподбор экскурсий</h4>
+                <p className="text-sm opacity-90">
+                  Мы подберем лучшие экскурсии на каждый день вашего отдыха
+                </p>
+              </div>
+            </Button>
+            
+            <Button
+              variant={tourMode === "manual" ? "default" : "outline"}
+              onClick={() => setTourMode("manual")}
+              className={`h-auto p-6 ${tourMode === "manual" 
+                ? "bg-gradient-ocean text-white" 
+                : "hover:border-primary/50"
+              }`}
+            >
+              <div className="text-center">
+                <Settings className="h-8 w-8 mx-auto mb-3" />
+                <h4 className="font-semibold mb-2">Ручной выбор</h4>
+                <p className="text-sm opacity-90">
+                  Самостоятельно выберите экскурсии и составьте свой маршрут
+                </p>
+              </div>
+            </Button>
+          </div>
+        </Card>
 
         {/* Filters */}
         <Card className="p-6 mb-8 bg-card border-0 shadow-card">
