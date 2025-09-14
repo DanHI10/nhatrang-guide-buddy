@@ -3,105 +3,82 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Briefcase, MapPin, DollarSign, Clock, Users, Globe, Star, Filter } from "lucide-react";
-
 const JobsSection = () => {
-  const jobCategories = [
-    "Все вакансии",
-    "IT и технологии", 
-    "Туризм и гостиницы",
-    "Преподавание",
-    "Ресторанный бизнес",
-    "Фриланс",
-    "Стартапы"
-  ];
-
-  const jobs = [
-    {
-      title: "React разработчик",
-      company: "TechVietnam Solutions",
-      location: "Хошимин",
-      salary: "$1500-2500",
-      type: "Полная занятость",
-      remote: true,
-      experience: "2+ года",
-      tags: ["React", "JavaScript", "Remote"],
-      rating: 4.8,
-      description: "Разработка современных веб-приложений для международных клиентов. Удаленная работа, гибкий график."
-    },
-    {
-      title: "Преподаватель английского языка",
-      company: "English First Vietnam",
-      location: "Нячанг",
-      salary: "$800-1200", 
-      type: "Полная занятость",
-      remote: false,
-      experience: "Без опыта",
-      tags: ["Английский", "Преподавание", "TEFL"],
-      rating: 4.6,
-      description: "Обучение детей и взрослых английскому языку. Предоставляем рабочую визу и жилье."
-    },
-    {
-      title: "Гид-экскурсовод",
-      company: "Vietnam Discovery Tours",
-      location: "Ханой, Нячанг",
-      salary: "$600-1000",
-      type: "Частичная занятость",
-      remote: false,
-      experience: "1+ год",
-      tags: ["Туризм", "Русский", "Гид"],
-      rating: 4.7,
-      description: "Проведение экскурсий для русскоязычных туристов. Знание истории и культуры Вьетнама обязательно."
-    },
-    {
-      title: "Менеджер ресторана",
-      company: "Saigon Grill Chain",
-      location: "Хошимин",
-      salary: "$900-1400",
-      type: "Полная занятость", 
-      remote: false,
-      experience: "3+ года",
-      tags: ["Ресторан", "Менеджмент", "HoReCa"],
-      rating: 4.5,
-      description: "Управление рестораном европейской кухни. Опыт работы в сфере общепита обязателен."
-    },
-    {
-      title: "Digital Marketing специалист",
-      company: "Asia Marketing Hub",
-      location: "Хошимин",
-      salary: "$1200-1800",
-      type: "Полная занятость",
-      remote: true,
-      experience: "2+ года", 
-      tags: ["Маркетинг", "SMM", "Remote"],
-      rating: 4.9,
-      description: "Продвижение брендов в социальных сетях и поисковых системах. Возможность удаленной работы."
-    },
-    {
-      title: "Переводчик русский-вьетнамский",
-      company: "VietRus Translation",
-      location: "Ханой",
-      salary: "$700-1100",
-      type: "Freelance",
-      remote: true,
-      experience: "1+ год",
-      tags: ["Перевод", "Русский", "Вьетнамский"],
-      rating: 4.4,
-      description: "Письменные и устные переводы для бизнеса и туризма. Гибкий график работы."
-    }
-  ];
-
-  return (
-    <section className="py-16 bg-gradient-to-b from-background to-muted/50">
+  const jobCategories = ["Все вакансии", "IT и технологии", "Туризм и гостиницы", "Преподавание", "Ресторанный бизнес", "Фриланс", "Стартапы"];
+  const jobs = [{
+    title: "React разработчик",
+    company: "TechVietnam Solutions",
+    location: "Хошимин",
+    salary: "$1500-2500",
+    type: "Полная занятость",
+    remote: true,
+    experience: "2+ года",
+    tags: ["React", "JavaScript", "Remote"],
+    rating: 4.8,
+    description: "Разработка современных веб-приложений для международных клиентов. Удаленная работа, гибкий график."
+  }, {
+    title: "Преподаватель английского языка",
+    company: "English First Vietnam",
+    location: "Нячанг",
+    salary: "$800-1200",
+    type: "Полная занятость",
+    remote: false,
+    experience: "Без опыта",
+    tags: ["Английский", "Преподавание", "TEFL"],
+    rating: 4.6,
+    description: "Обучение детей и взрослых английскому языку. Предоставляем рабочую визу и жилье."
+  }, {
+    title: "Гид-экскурсовод",
+    company: "Vietnam Discovery Tours",
+    location: "Ханой, Нячанг",
+    salary: "$600-1000",
+    type: "Частичная занятость",
+    remote: false,
+    experience: "1+ год",
+    tags: ["Туризм", "Русский", "Гид"],
+    rating: 4.7,
+    description: "Проведение экскурсий для русскоязычных туристов. Знание истории и культуры Вьетнама обязательно."
+  }, {
+    title: "Менеджер ресторана",
+    company: "Saigon Grill Chain",
+    location: "Хошимин",
+    salary: "$900-1400",
+    type: "Полная занятость",
+    remote: false,
+    experience: "3+ года",
+    tags: ["Ресторан", "Менеджмент", "HoReCa"],
+    rating: 4.5,
+    description: "Управление рестораном европейской кухни. Опыт работы в сфере общепита обязателен."
+  }, {
+    title: "Digital Marketing специалист",
+    company: "Asia Marketing Hub",
+    location: "Хошимин",
+    salary: "$1200-1800",
+    type: "Полная занятость",
+    remote: true,
+    experience: "2+ года",
+    tags: ["Маркетинг", "SMM", "Remote"],
+    rating: 4.9,
+    description: "Продвижение брендов в социальных сетях и поисковых системах. Возможность удаленной работы."
+  }, {
+    title: "Переводчик русский-вьетнамский",
+    company: "VietRus Translation",
+    location: "Ханой",
+    salary: "$700-1100",
+    type: "Freelance",
+    remote: true,
+    experience: "1+ год",
+    tags: ["Перевод", "Русский", "Вьетнамский"],
+    rating: 4.4,
+    description: "Письменные и устные переводы для бизнеса и туризма. Гибкий график работы."
+  }];
+  return <section className="py-16 bg-gradient-to-b from-background to-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-ocean bg-clip-text text-transparent">
-              Работа во Вьетнаме
-            </span>
+            <span className="bg-gradient-ocean bg-clip-text text-transparent">Работа в Азии</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Найдите работу мечты во Вьетнаме. Более 200 актуальных вакансий для русскоговорящих
-          </p>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Найдите работу мечты в Азии. Более 200 актуальных вакансий для русскоговорящих</p>
         </div>
 
         {/* Фильтры */}
@@ -109,18 +86,9 @@ const JobsSection = () => {
           <div className="flex flex-col lg:flex-row gap-6">
             <div className="flex-1">
               <div className="flex flex-wrap gap-2">
-                {jobCategories.map((category) => (
-                  <Badge 
-                    key={category}
-                    variant={category === "Все вакансии" ? "default" : "outline"}
-                    className={category === "Все вакансии" 
-                      ? "bg-gradient-ocean text-white px-4 py-2 cursor-pointer hover:shadow-soft transition-smooth" 
-                      : "cursor-pointer hover:bg-muted transition-smooth px-4 py-2"
-                    }
-                  >
+                {jobCategories.map(category => <Badge key={category} variant={category === "Все вакансии" ? "default" : "outline"} className={category === "Все вакансии" ? "bg-gradient-ocean text-white px-4 py-2 cursor-pointer hover:shadow-soft transition-smooth" : "cursor-pointer hover:bg-muted transition-smooth px-4 py-2"}>
                     {category}
-                  </Badge>
-                ))}
+                  </Badge>)}
               </div>
             </div>
             
@@ -139,8 +107,7 @@ const JobsSection = () => {
 
         {/* Список вакансий */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
-          {jobs.map((job, index) => (
-            <Card key={index} className="p-6 bg-card border-0 shadow-card hover:shadow-elevated transition-shadow">
+          {jobs.map((job, index) => <Card key={index} className="p-6 bg-card border-0 shadow-card hover:shadow-elevated transition-shadow">
               <div className="space-y-4">
                 {/* Заголовок */}
                 <div className="flex justify-between items-start">
@@ -155,11 +122,9 @@ const JobsSection = () => {
                       </div>
                     </div>
                   </div>
-                  {job.remote && (
-                    <Badge className="bg-green-100 text-green-800 border-green-200">
+                  {job.remote && <Badge className="bg-green-100 text-green-800 border-green-200">
                       Remote
-                    </Badge>
-                  )}
+                    </Badge>}
                 </div>
 
                 {/* Детали */}
@@ -187,11 +152,9 @@ const JobsSection = () => {
 
                 {/* Теги */}
                 <div className="flex flex-wrap gap-2">
-                  {job.tags.map((tag, tagIndex) => (
-                    <Badge key={tagIndex} variant="secondary" className="text-xs">
+                  {job.tags.map((tag, tagIndex) => <Badge key={tagIndex} variant="secondary" className="text-xs">
                       {tag}
-                    </Badge>
-                  ))}
+                    </Badge>)}
                 </div>
 
                 <Separator />
@@ -206,8 +169,7 @@ const JobsSection = () => {
                   </Button>
                 </div>
               </div>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Показать больше */}
@@ -263,8 +225,6 @@ const JobsSection = () => {
           </div>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default JobsSection;

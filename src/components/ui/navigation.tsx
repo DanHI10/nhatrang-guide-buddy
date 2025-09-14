@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Search, MapPin, Phone } from "lucide-react";
-
 const Navigation = () => {
-  return (
-    <nav className="bg-card/90 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
+  return <nav className="bg-card/90 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -12,7 +10,7 @@ const Navigation = () => {
               <h1 className="text-2xl font-bold bg-gradient-ocean bg-clip-text text-transparent">
                 Тур Маркет
               </h1>
-              <p className="text-sm text-muted-foreground">Всё про Нячанг</p>
+              <p className="text-sm text-muted-foreground">Всё про Азию</p>
             </div>
           </div>
           
@@ -40,8 +38,6 @@ const Navigation = () => {
           </div>
         </div>
       </div>
-    </nav>
-  );
+    </nav>;
 };
-
 export default Navigation;
