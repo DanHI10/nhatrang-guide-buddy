@@ -1,6 +1,7 @@
 import HeroSection from "@/components/ui/hero-section";
 import TourConstructor from "@/components/ui/tour-constructor";
 import FlightsSection from "@/components/ui/flights-section";
+import HotelsSection from "@/components/ui/hotels-section";
 import ExcursionsSection from "@/components/ui/excursions-section";
 import EntertainmentSection from "@/components/ui/entertainment-section";
 import InfoSection from "@/components/ui/info-section";
@@ -12,6 +13,7 @@ const Index = () => {
       <HeroSection />
       <TourConstructor />
       <FlightsSection />
+      <HotelsSection />
       <ExcursionsSection />
       <EntertainmentSection />
       <JobsSection />
