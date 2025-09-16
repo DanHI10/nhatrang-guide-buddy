@@ -74,7 +74,7 @@ const ExcursionsSection = () => {
                 <Settings className="h-8 w-8 mx-auto mb-3" />
                 <h4 className="font-semibold mb-2">Выберу сам</h4>
                 <p className="text-sm opacity-90 py-0">Самостоятельно выберите экскурсии
- и составьте свой маршрут</p>
+ и составьте свой маршрут</p>
               </div>
             </Button>
           </div>

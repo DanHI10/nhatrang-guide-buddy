@@ -37,9 +37,7 @@ const FlightsSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-ocean bg-clip-text text-transparent">
-              Авиабилеты во Вьетнам
-            </span>
+            <span className="bg-gradient-ocean bg-clip-text text-transparent">Авиабилеты</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Найдите лучшие предложения на авиабилеты из России в Азию</p>
         </div>
