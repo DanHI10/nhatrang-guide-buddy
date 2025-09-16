@@ -43,11 +43,11 @@ const ExcursionsSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-ocean bg-clip-text text-transparent">
-              Лучшие экскурсии
+              Подбор экскурсий
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Выберите из более чем 50 увлекательных экскурсий и туров по Нячангу
+            Поможем найти и забронировать лучшие экскурсии с проверенными гидами для вашего отдыха.
           </p>
         </div>
 
@@ -62,9 +62,9 @@ const ExcursionsSection = () => {
             <Button variant={tourMode === "auto" ? "default" : "outline"} onClick={() => setTourMode("auto")} className={`h-auto p-6 ${tourMode === "auto" ? "bg-gradient-ocean text-white" : "hover:border-primary/50"}`}>
               <div className="text-center">
                 <Wand2 className="h-8 w-8 mx-auto mb-3" />
-                <h4 className="font-semibold mb-2">Автоподбор экскурсий</h4>
+                <h4 className="font-semibold mb-2">Помочь выбрать</h4>
                 <p className="text-sm opacity-90">
-                  Мы подберем лучшие экскурсии на каждый день вашего отдыха
+                  Мы поможем подобрать лучшие экскурсии на каждый день вашего отдыха
                 </p>
               </div>
             </Button>
@@ -72,9 +72,9 @@ const ExcursionsSection = () => {
             <Button variant={tourMode === "manual" ? "default" : "outline"} onClick={() => setTourMode("manual")} className={`h-auto p-6 ${tourMode === "manual" ? "bg-gradient-ocean text-white" : "hover:border-primary/50"}`}>
               <div className="text-center">
                 <Settings className="h-8 w-8 mx-auto mb-3" />
-                <h4 className="font-semibold mb-2">Ручной выбор</h4>
+                <h4 className="font-semibold mb-2">Выберу сам</h4>
                 <p className="text-sm opacity-90 py-0">Самостоятельно выберите экскурсии
- и составьте свой маршрут</p>
+ и составьте свой маршрут</p>
               </div>
             </Button>
           </div>

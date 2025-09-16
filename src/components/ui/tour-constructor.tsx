@@ -48,11 +48,11 @@ const TourConstructor = () => {
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-ocean bg-clip-text text-transparent">
-              Конструктор тура
+              Помощь в планировании
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Создайте идеальный тур по Юго-Восточной Азии за несколько кликов
+            Поможем подобрать идеальный маршрут по Азии. Укажите ваши предпочтения, и мы предложим варианты.
           </p>
         </div>
 
@@ -185,7 +185,7 @@ const TourConstructor = () => {
               </div>
 
               <Button size="lg" className="w-full bg-secondary hover:bg-secondary/80">
-                Забронировать тур
+                Получить консультацию
               </Button>
             </div>
           </Card>
