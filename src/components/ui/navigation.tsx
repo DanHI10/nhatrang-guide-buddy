@@ -47,7 +47,7 @@ const Navigation = () => {
               className="hidden sm:flex"
             >
               <Globe className="h-4 w-4 mr-2" />
-              {language === 'ru' ? 'EN' : 'RU'}
+              {language === 'ru' ? 'RU' : 'ENG'}
             </Button>
             <Button size="sm" variant="outline" className="hidden sm:flex">
               <Phone className="h-4 w-4 mr-2" />
