@@ -12,12 +12,6 @@ const Index = () => {
     <main className="min-h-screen">
       <HeroSection />
       <TourConstructor />
-      <FlightsSection />
-      <HotelsSection />
-      <ExcursionsSection />
-      <EntertainmentSection />
-      <JobsSection />
-      <InfoSection />
       
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-12">
