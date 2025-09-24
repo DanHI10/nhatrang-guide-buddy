@@ -11,6 +11,7 @@ interface LanguageContextType {
 const translations = {
   ru: {
     // Navigation
+    'nav.services': 'Услуги',
     'nav.excursions': 'Экскурсии',
     'nav.entertainment': 'Развлечения', 
     'nav.flights': 'Авиабилеты',
@@ -19,6 +20,7 @@ const translations = {
     'nav.info': 'Информация',
     'nav.contacts': 'Контакты',
     'nav.search': 'Поиск',
+    'lang': 'ru',
     
     // Hero section
     'hero.title': 'Ваш персональный консьерж в Азии',
@@ -77,6 +79,7 @@ const translations = {
   },
   en: {
     // Navigation  
+    'nav.services': 'Services',
     'nav.excursions': 'Excursions',
     'nav.entertainment': 'Entertainment',
     'nav.flights': 'Flights', 
@@ -85,6 +88,7 @@ const translations = {
     'nav.info': 'Information',
     'nav.contacts': 'Contacts',
     'nav.search': 'Search',
+    'lang': 'en',
     
     // Hero section
     'hero.title': 'Your Personal Concierge in Asia',

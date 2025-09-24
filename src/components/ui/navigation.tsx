@@ -8,7 +8,7 @@ const Navigation = () => {
   return <nav className="bg-card/90 backdrop-blur-sm border-b border-border/50 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <MapPin className="h-8 w-8 text-primary" />
             <div>
               <h1 className="text-2xl font-bold bg-gradient-ocean bg-clip-text text-transparent">
@@ -16,9 +16,12 @@ const Navigation = () => {
               </h1>
               <p className="text-sm text-muted-foreground">Всё про Азию</p>
             </div>
-          </div>
+          </Link>
           
           <div className="hidden md:flex items-center space-x-8">
+            <Link to="/services" className="text-foreground hover:text-primary transition-smooth">
+              {t('nav.services')}
+            </Link>
             <Link to="/flights" className="text-foreground hover:text-primary transition-smooth">
               {t('nav.flights')}
             </Link>
