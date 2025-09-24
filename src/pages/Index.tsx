@@ -1,4 +1,3 @@
-import HeroSection from "@/components/ui/hero-section";
 import TourConstructor from "@/components/ui/tour-constructor";
 import FlightsSection from "@/components/ui/flights-section";
 import HotelsSection from "@/components/ui/hotels-section";
@@ -10,7 +9,6 @@ import JobsSection from "@/components/ui/jobs-section";
 const Index = () => {
   return (
     <main className="min-h-screen">
-      <HeroSection />
       <TourConstructor />
       
       {/* Footer */}
