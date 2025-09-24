@@ -209,35 +209,28 @@ const Home = () => {
       </section>
 
       {/* Events Section */}
-      <section className="py-16 px-4 bg-gradient-subtle">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 bg-gradient-ocean bg-clip-text text-transparent">
-            {currentTranslations.title}
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            {currentTranslations.subtitle}
-          </p>
-          
-          {/* Category Filters */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Button variant="default" className="bg-gradient-ocean text-white">
-              {currentTranslations.filterAll}
-            </Button>
-            <Button variant="outline">{currentTranslations.filterParty}</Button>
-            <Button variant="outline">{currentTranslations.filterFestival}</Button>
-            <Button variant="outline">{currentTranslations.filterMusic}</Button>
-            <Button variant="outline">{currentTranslations.filterCultural}</Button>
-            <Button variant="outline">{currentTranslations.filterWellness}</Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Events Grid */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 bg-background">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-ocean bg-clip-text text-transparent">
-            {currentTranslations.upcomingEvents}
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-ocean bg-clip-text text-transparent">
+              {currentTranslations.title}
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
+              {currentTranslations.subtitle}
+            </p>
+            
+            {/* Category Filters */}
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button variant="default" className="bg-gradient-ocean text-white">
+                {currentTranslations.filterAll}
+              </Button>
+              <Button variant="outline">{currentTranslations.filterParty}</Button>
+              <Button variant="outline">{currentTranslations.filterFestival}</Button>
+              <Button variant="outline">{currentTranslations.filterMusic}</Button>
+              <Button variant="outline">{currentTranslations.filterCultural}</Button>
+              <Button variant="outline">{currentTranslations.filterWellness}</Button>
+            </div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mockEvents.map((event) => (
