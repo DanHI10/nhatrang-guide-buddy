@@ -2,7 +2,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin, Clock, Users, ExternalLink } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Calendar, MapPin, Clock, Users, ExternalLink, Search, Star } from "lucide-react";
 
 // Mock data - будет заменено на API
 const mockEvents = [
@@ -99,6 +100,14 @@ const Home = () => {
 
   const translations = {
     ru: {
+      welcomeTitle: "Добро пожаловать",
+      welcomeSubtitle: "в Азию",
+      welcomeDescription: "Ваш персональный консьерж в Азии. Поможем подобрать лучшие экскурсии, развлечения и всё необходимое для незабываемого отдыха!",
+      searchPlaceholder: "Найти экскурсии, рестораны, развлечения...",
+      searchButton: "Найти",
+      statsPlaces: "200+ мест",
+      statsRating: "4.9 рейтинг",
+      statsTourists: "50k+ туристов",
       title: "Главные События Азии",
       subtitle: "Самые горячие мероприятия, фестивали и вечеринки в Азии",
       filterAll: "Все события",
@@ -116,6 +125,14 @@ const Home = () => {
       price: "Цена"
     },
     en: {
+      welcomeTitle: "Welcome",
+      welcomeSubtitle: "to Asia",
+      welcomeDescription: "Your personal concierge in Asia. We'll help you find the best excursions, entertainment and everything you need for an unforgettable vacation!",
+      searchPlaceholder: "Find excursions, restaurants, entertainment...",
+      searchButton: "Search",
+      statsPlaces: "200+ places",
+      statsRating: "4.9 rating",
+      statsTourists: "50k+ tourists",
       title: "Main Events in Asia", 
       subtitle: "The hottest events, festivals and parties in Asia",
       filterAll: "All Events",
@@ -137,13 +154,66 @@ const Home = () => {
   const currentTranslations = translations[t('lang') as keyof typeof translations] || translations.ru;
 
   return (
-    <main className="min-h-screen bg-gradient-subtle">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
+    <main className="min-h-screen">
+      {/* Hero Section with Search */}
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+          backgroundImage: `url(/lovable-uploads/image.png.png)`
+        }} />
+        
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-background/80" />
+        
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
+              {currentTranslations.welcomeTitle}
+              <span className="block text-secondary">{currentTranslations.welcomeSubtitle}</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-white/90 mb-8 drop-shadow">
+              {currentTranslations.welcomeDescription}
+            </p>
+            
+            {/* Search Bar */}
+            <Card className="p-6 mb-8 bg-card/95 backdrop-blur border-0 shadow-elevated">
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-1">
+                  <Input placeholder={currentTranslations.searchPlaceholder} className="h-12 text-lg border-0 bg-muted/50 focus:bg-muted" />
+                </div>
+                <Button size="lg" className="bg-gradient-ocean text-white px-8 shadow-soft hover:shadow-elevated transition-smooth">
+                  <Search className="h-5 w-5 mr-2" />
+                  {currentTranslations.searchButton}
+                </Button>
+              </div>
+            </Card>
+            
+            {/* Quick Stats */}
+            <div className="flex flex-wrap justify-center gap-8 text-white mb-12">
+              <div className="flex items-center space-x-2">
+                <MapPin className="h-6 w-6 text-secondary" />
+                <span className="text-lg">{currentTranslations.statsPlaces}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Star className="h-6 w-6 text-secondary" />
+                <span className="text-lg">{currentTranslations.statsRating}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Users className="h-6 w-6 text-secondary" />
+                <span className="text-lg">{currentTranslations.statsTourists}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Events Section */}
+      <section className="py-16 px-4 bg-gradient-subtle">
         <div className="container mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-ocean bg-clip-text text-transparent mb-6">
+          <h2 className="text-3xl font-bold mb-6 bg-gradient-ocean bg-clip-text text-transparent">
             {currentTranslations.title}
-          </h1>
+          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             {currentTranslations.subtitle}
           </p>
